@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=0.7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>The aviator</title>
+    <title>Авиаторы</title>
     <link rel="icon" href="favicon/icon.svg">
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -47,7 +47,7 @@
                 <div class="blockly-editor">
                     <div id="blockly-div"></div>
                     <xml id="toolbox" style="display: none">
-                        <category name="Actions" colour="60">
+                        <category name="Действия" colour="60">
                             <block type="move">
                                 <field name="DIRECTION">0</field>
                             </block>
@@ -64,7 +64,7 @@
                             <block type="release"></block>
                         </category>
                         <sep></sep>
-                        <category name="Controls" colour="120">
+                        <category name="Управление" colour="120">
                             <block type="controls_whileUntil"></block>
                             <block type="controls_if"></block>
                             <block type="logic_negate"></block>
@@ -73,13 +73,13 @@
                             <block type="logic_boolean"></block>
                         </category>
                         <sep></sep>
-                        <category name="Methods" colour="290" custom="PROCEDURE"></category>
+                        <category name="Логика" colour="290" custom="PROCEDURE"></category>
                     </xml>
                 </div>
                 <!--controls menu-->
                 <div class="game-controller">
                     <div>
-                        <div class="game-button" data-use="back">🔙</div>
+                        <div class="game-button" data-use="back" style="font-size: medium;">Назад</div>
                         <br>
                         <div class="game-button" data-use="backward" data-tooltip="Backward">⏪</div>
                         <div class="game-button" data-use="forward" data-tooltip="Forward">⏩</div>
@@ -106,20 +106,20 @@
             </div>
             <!--level inf-->
             <div class="game-menu-container">
-                <span class="game-menu-level"> Level - 1 </span>
+                <span class="game-menu-level"> Уровень - 1 </span>
             </div>
             <!--board-->
             <div class="game-menu-container">
                 <div class="game-menu-board">
-                    <span class="board-name">Moves</span>
+                    <span class="board-name">Ходы</span>
                     <div data-use="moves" class="board-moves">0</div>
                 </div>
                 <div class="game-menu-board">
-                    <span class="board-name">Taken</span>
+                    <span class="board-name">Кубики</span>
                     <div data-use="taken" class="board-color" style="background-color: whitesmoke"></div>
                 </div>
                 <div class="game-menu-board">
-                    <span class="board-name">Over</span>
+                    <span class="board-name">⠀</span>
                     <div data-use="over" class="board-color" style="background-color: whitesmoke"></div>
                 </div>
             </div>
@@ -142,9 +142,7 @@
     <div class="fullscreen worlds">
         <!--links-->
         <div class="links">
-            <a data-use="fullscreen">📺</a> |
-            <a data-use="home">home</a> |
-            <a data-use="tutorial" href="tutorial">tutorial</a>
+
         </div>
     </div>
 
@@ -152,7 +150,7 @@
     <div class="fullscreen courtain">
         <!--content-->
         <div class="content">
-            <h1 class="title"><span>the</span>Aviator</h1>
+            <h1 class="title"><span></span>Авиаторы</h1>
             <image class="aviator" src="images/aviator/aviator.png"></image>
         </div>
     </div>
@@ -242,7 +240,7 @@
             // icon getter
             icon(index) {
                 return [
-                    '🔙',
+                    'Назад',
                     '1️⃣',
                     '2️⃣',
                     '3️⃣',
@@ -932,10 +930,6 @@
         Blockly.Blocks.procedures_mutatorarg.contextMenu = false
         Blockly.Blocks.procedures_mutatorcontainer.contextMenu = false
     </script>
-
-    <!--github link-->
-    <script src="libs/github/index.js"></script>
-    <script>GitHub.inject(ELEMENTS['COURTAIN']['DIV'])</script>
 </body>
 
 </html>
